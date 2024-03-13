@@ -1,7 +1,7 @@
-import { LogoSvg } from '../../assets/svg/logo'
-import styles from './header.module.scss'
+import { LogoSvg } from '../../assets/svg/logo';
+import styles from './header.module.scss';
 
-export function Header() {
+export default function Header() {
 
   return (
     <div className={styles.allHeader}>

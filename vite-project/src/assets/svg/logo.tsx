@@ -1,4 +1,4 @@
-type LogoSvgProps = { color: string }
+import { LogoSvgProps } from "../../utils/types/types";
 
 export function LogoSvg({color}:LogoSvgProps) {
   return (

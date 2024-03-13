@@ -1,9 +1,10 @@
 :root {
   --background-color: #E7E7E7;
   --color-brand: #007782;
+  --width-container-desktop-large: 1400px;
   --width-container-desktop: 1120px;
-  --width-container-desktop-small: 960px;
-  --width-container-tablet: 640px;
+  --width-container-desktop-small: 1050px;
+  --width-container-tablet: 700px;
   --width-container-mobile: 340px;
 }
 
