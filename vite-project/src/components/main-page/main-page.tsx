@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import InfiniteScroll from '../infinite-scroll/infinite-scroll';
 import styles from './main-page.module.scss';
+import Description from '../description/description';
 
 
 export default function MainPage() {
@@ -28,10 +29,15 @@ export default function MainPage() {
 
   return (
     <>
-      <form className={styles.allKeyForm} onSubmit={onSubmit}>
-        <input type='text' name='key'className={styles.inputKeyForm} placeholder='Enter your API key' />
-        <button  type='submit'className={styles.buttonKeyForm}>Enter</button>
-      </form>
+      { (!apiKey || apiKey === '') && 
+        <>
+          <Description />
+          <form className={styles.allKeyForm} onSubmit={onSubmit}>
+            <input type='text' name='key'className={styles.inputKeyForm} placeholder='Enter your API key' />
+            <button  type='submit'className={styles.buttonKeyForm}>Enter</button>
+          </form> 
+        </> 
+      }
       { apiKey &&
         <InfiniteScroll yourKey={apiKey}/>
       }

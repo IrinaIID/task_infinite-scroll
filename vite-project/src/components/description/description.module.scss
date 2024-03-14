@@ -1,0 +1,46 @@
+.allDescription {
+  width: var(--width-container-desktop-large);
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+  margin: 40px 0 20px;
+
+  @media (max-width: 1480px) {
+    width: var(--width-container-desktop);
+  }
+
+  @media (max-width: 1200px) {
+    width: var(--width-container-desktop-small);
+  }
+
+  @media (max-width: 1080px) {
+    width: 800px;
+  }
+
+  @media (max-width: 860px) {
+    width: var(--width-container-tablet);
+  }
+
+  @media (max-width: 720px) {
+    width: var(--width-container-mobile);
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.descriptionH1 {
+  color: var(--color-brand);
+  margin-bottom: 10px;
+}
+
+.descriptionText {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.descriptionLink {
+  color: var(--color-brand);
+  font-size: 20px;
+  font-weight: 700;
+}
