@@ -1,6 +1,6 @@
 <h1>task_infinite-scroll</h1>
 
-[Deploy link]()
+[Deploy link](https://irinaiid.github.io/task_infinite-scroll/)
 
 Technologies used in this project: React, TypeScript, SCSS.
 
