@@ -3,24 +3,29 @@
   display: flex;
   flex-direction: column;
   margin: 40px 0 20px;
-
-  @media (max-width: 1480px) {
+}
+@media (max-width: 1480px) {
+  .allDescription {
     width: var(--width-container-desktop);
   }
-
-  @media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
+  .allDescription {
     width: var(--width-container-desktop-small);
   }
-
-  @media (max-width: 1080px) {
+}
+@media (max-width: 1080px) {
+  .allDescription {
     width: 800px;
   }
-
-  @media (max-width: 860px) {
+}
+@media (max-width: 860px) {
+  .allDescription {
     width: var(--width-container-tablet);
   }
-
-  @media (max-width: 720px) {
+}
+@media (max-width: 720px) {
+  .allDescription {
     width: var(--width-container-mobile);
     flex-direction: column;
     margin-top: 20px;
@@ -41,4 +46,4 @@
   color: var(--color-brand);
   font-size: 20px;
   font-weight: 700;
-}
+}/*# sourceMappingURL=description.module.css.map */

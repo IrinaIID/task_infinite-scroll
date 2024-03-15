@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
+import Description from '../description/description';
 import InfiniteScroll from '../infinite-scroll/infinite-scroll';
 import styles from './main-page.module.scss';
-import Description from '../description/description';
 
 
 export default function MainPage() {
@@ -17,7 +17,7 @@ export default function MainPage() {
       })
       response.status === 200 ? setapiKey(str) : setapiKey('')
     } catch (error) {
-      alert('uccorrect key, try again')
+      alert('Invalid key. Try again :  - )')
     }
   } 
 

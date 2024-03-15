@@ -28,5 +28,6 @@ export type ScrollProps = { yourKey: string | null}
 export type PropsPhotoCard = {
   name: string,
   photographer: string,
-  img: string
+  img: string,
+  link: string
 }

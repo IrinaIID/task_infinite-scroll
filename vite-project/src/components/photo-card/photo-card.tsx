@@ -1,18 +1,37 @@
+import { FormEvent, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import HeartSvg from '../../assets/svg/heart';
 import { PropsPhotoCard } from '../../utils/types/types';
 import styles from './photo-card.module.scss';
 
 
-export default function PhotoCard({name, photographer, img}: PropsPhotoCard) {
+export default function PhotoCard({name, photographer, img, link}: PropsPhotoCard) {
+
+  const [isFavourite, setIsFavourite] = useState(false);
+
+  name = name.length > 30 ? name.slice(0, 31) + '...' : name;
+
+  function handleClick(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsFavourite(!isFavourite)
+  }
 
   return (
     <div className={styles.cardBlock}>
+      <div className={isFavourite ? `${styles.likeBlock}`: `${styles.hidenLikeBlock} ${styles.likeBlock}`}>
+        <HeartSvg />
+      </div>
       <div className={styles.cardHoverBlock}>
-        <p className={styles.hoverName}>{name}</p>
+        <a href={link} target='_blank' className={styles.hoverName}>{name === '' ? 'Without name' : name}</a>
         <div className={styles.hoverDivider}></div>
         <p className={styles.hoverPhotographer}>{photographer}</p>
-        <button className={styles.hoverButton} value={'sdcs'}>Favourite</button>
+        <form onSubmit={handleClick}>
+          <button type='submit' className={isFavourite? styles.hoverButtonFav : styles.hoverButton}>
+          {!isFavourite ? `Favourite` : `Remove`}
+          </button>
+        </form>
       </div>
-      <img className={styles.cardImg} src={img} alt="csdc" />
+      <LazyLoadImage alt={`photo`} src={img} className={styles.cardImg} />
     </div>
   )
 }
