@@ -31,3 +31,8 @@ export type PropsPhotoCard = {
   img: string,
   link: string
 }
+
+export type GlobalContent = {
+  apiKey: string
+  setApiKey:(c: string) => void
+}

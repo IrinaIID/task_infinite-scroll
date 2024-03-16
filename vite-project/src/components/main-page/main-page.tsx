@@ -15,16 +15,16 @@ export default function MainPage() {
           Authorization: str
         }
       })
-      response.status === 200 ? setapiKey(str) : setapiKey('')
+      response.status === 200 ? setapiKey(str) : setapiKey('');
     } catch (error) {
-      alert('Invalid key. Try again :  - )')
+      alert('Invalid key. Try again :  - )');
     }
   } 
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const enteredKey = event.currentTarget.key.value
-    getStatus(enteredKey)
+    const enteredKey = event.currentTarget.key.value;
+    getStatus(enteredKey);
   }
 
   return (

@@ -13,7 +13,7 @@ export default function PhotoCard({name, photographer, img, link}: PropsPhotoCar
 
   function handleClick(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setIsFavourite(!isFavourite)
+    setIsFavourite(!isFavourite);
   }
 
   return (

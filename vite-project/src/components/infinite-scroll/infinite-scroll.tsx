@@ -19,15 +19,15 @@ export default function InfiniteScroll({yourKey}: ScrollProps) {
       const allData = await response.json();
       const dataPhoto = await allData.photos;
       const newArr = [...photos, ...dataPhoto];
-      setPhotos(newArr)
+      setPhotos(newArr);
 
     } catch (error) {
-      alert('Invalid key. Try again :  - )')
+      alert('Invalid key. Try again :  - )');
     }
   } 
 
   useEffect(() => {
-    getData()
+    getData();
   }, [currentPage]);
 
   const handleScroll = () => {
@@ -47,15 +47,13 @@ export default function InfiniteScroll({yourKey}: ScrollProps) {
 
   return (
     <>
-      {true && 
-        <div className={styles.container}>
-          { photos.map((photo) => {
+      <div className={styles.container}>
+        { photos.map((photo) => {
           return (
             <PhotoCard name={photo.alt} photographer={photo.photographer} img={photo.src.large} link={photo.src.original} key={photo.id}/>
           )})
-          }
-        </div>
-      }
+        }
+      </div>
     </>
   );
 }
