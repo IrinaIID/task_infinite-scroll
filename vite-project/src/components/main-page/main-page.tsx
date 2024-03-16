@@ -29,18 +29,16 @@ export default function MainPage() {
 
   return (
     <>
-      { (!apiKey || apiKey === '') && 
+      { !apiKey &&
         <>
           <Description />
           <form className={styles.allKeyForm} onSubmit={onSubmit}>
             <input type='text' name='key'className={styles.inputKeyForm} placeholder='Enter your API key' />
             <button  type='submit'className={styles.buttonKeyForm}>Enter</button>
           </form> 
-        </> 
+        </>
       }
-      { apiKey &&
-        <InfiniteScroll yourKey={apiKey}/>
-      }
+      { apiKey && <InfiniteScroll yourKey={apiKey}/> }
     </>
   )
 }
